@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-
+  
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -46,6 +46,7 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Debug mode disables concatenation and preprocessing of assets.
+  config.action_cable.disable_request_forgery_protection = true
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
